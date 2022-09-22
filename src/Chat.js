@@ -6,7 +6,6 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import { useTheme } from '@mui/material/styles';
 
-
 function Chat({Chat}) {
     const theme = useTheme();
     if (Chat.length > 0) {
@@ -26,7 +25,5 @@ function Chat({Chat}) {
         );
     }
 }
-
-
 
 export default Chat;

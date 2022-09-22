@@ -1,13 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import MessageList from "../MessageList";
+import MessageList from "./MessageList";
 import Chat from "./Chat";
 import {Box, Button, Input} from '@mui/material';
 import {ThemeProvider, createTheme} from "@mui/material";
 
-
-
 function App() {
-
   const theme = createTheme({
     palette: {
         primary: {
@@ -60,9 +57,6 @@ useEffect(() => {
     }, 1000)
 });
 
-
-  
-
 function botList() {
   const itemAuthor = messageList[messageList.length - 1];
     if(itemAuthor && itemAuthor.author) {
@@ -104,6 +98,4 @@ function botList() {
     </ThemeProvider>
   );
 }
-
-
 export default App;
