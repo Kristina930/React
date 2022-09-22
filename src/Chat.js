@@ -13,7 +13,7 @@ function Chat({Chat}) {
         return (
         <List sx={{ width: '100%', maxWidth: 450, bgcolor: theme.palette.primary.main }}>
             {Chat.map(item => (
-                <ListItem alignItems="flex-start" key={item.id}>
+                <ListItem  key={item.id}>
                     <ListItemAvatar>
                             <Avatar alt={item.user.toUpperCase()} src="/static/images/avatar/1.jpg"/>
                             <Avatar alt={item.user.toUpperCase()} src="/static/images/avatar/2.jpg"/>

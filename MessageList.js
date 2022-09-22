@@ -23,7 +23,6 @@ function MessageList({array}) {
                     </ListItem>
                     ))}
                     </List>
-
         );
     }
 }

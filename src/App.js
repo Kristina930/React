@@ -96,7 +96,7 @@ function botList() {
       })}
 
         <Chat chat={chat}/>
-        <Box component="form" sx={{background: theme.palette.primary.background, borderRadius: 1, p: 12}} onSubmit={handleClick}>
+        <Box component="form" sx={{background: theme.palette.primary.backgroun}} onSubmit={handleClick}>
           <p className={"box_p"}>Обратная связь</p>
         </Box>
         <MessageList array={messageList}/>
