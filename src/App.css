@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+.div_link{
+  display: flex;
+  margin-top: 20px;
+}
+.div_link_custom{
+  margin-left: 20px;
+}
+.div_main{
+  margin-top: 20px;
+  margin-left: 20px;
+
+}
+.div_footer{
+  margin-top: 20px;
+  margin-left: 20px;
+
+}
+.chat_box{
+  margin-top: 20px;
+
+}

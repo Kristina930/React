@@ -1,62 +1,34 @@
-import React, { useState, useEffect } from "react";
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import ChatPage from "./pages/ChatPage";
+import MessagePage from "./pages/MessagePage";
+import ProfilePage from "./pages/ProfilePage";
+import Layout from "./components/Layout";
+import NotFoundPage from "./pages/NotFoundPage";
+import CurrentChatPage from "./pages/CurrentChatPage"
+
+
 
 
 function App() {
-
-const [messageList, setMessageList] = useState([]);
-const [text, setText] = useState('');
-const [author, setAuthor] = useState('');
-
-const handleClick = (event) => {
-  event.preventDefault();
-  setMessageList(prevState => [...prevState, {
-    author: author, 
-    text: text
-  }]);
-}
-
-
-useEffect(() => {
-  setTimeout(() => {
-    botList(messageList);
-    }, 
-    1000);
-});
-
-function botList() {
-  const itemAuthor = messageList[messageList.length - 1];
-    if(itemAuthor && itemAuthor.author) {
-      setMessageList(prevState => [
-        ...prevState, {
-          //Не выводить имя автора, выводить ${itemAuthor.author}, не понимаю почему.
-            // eslint-disable-next-line no-template-curly-in-string
-            text: 'Сообщение от автора ${itemAuthor.author}'
-          }
-        ])
-    }
-}
-
   return (
-      <div>
-        <form onSubmit={handleClick}>
-          Ведите текст
-          <input value={text} onChange={(event) => setText(event.target.value)}/><br/>
-          Ведите автора:
-          <input value={author} onChange={(event) => setAuthor(event.target.value)}/><br/>
-          <button type="submit">Добавить сообщение</button>
-  
-        </form>
-        {messageList.map((message) => {
-          return(
-          <div>
-            {message.text}
-            {message.author}
-          </div>
-          )
-      })}
-    </div>
+    <>
+      <Routes>
+        <Route path={'/'} element={<Layout />}>
+        <Route index element={<HomePage />}/>
+          <Route path={'/ProfilePage'} element={<ProfilePage />} />
+          <Route path={'/MessagePage'} element={<MessagePage />} />
+          <Route path={'/ChatPage'} element={<ChatPage />}>
+              <Route path={':chatId'} element={<CurrentChatPage />}/>
+            </Route>
+          <Route path={'*'} element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </>
+
+
   );
 }
-
 
 export default App;
