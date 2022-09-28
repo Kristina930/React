@@ -1,12 +1,13 @@
 import React from 'react';
-import { Stack } from "@mui/material";
+import { Link } from "react-router-dom";
 
-function HomePage(props) {
+const HomePage = () => {
     return (
-        <Stack spacing={2}>
+        <Link>
             Добро пожаловать
-        </Stack>
+        </Link>
+
     );
-}
+};
 
 export default HomePage;

@@ -12,20 +12,20 @@ const Layout = () => {
                 <CustomLink to={"/"} >Hom</CustomLink>
                 </div>
                 <div class="div_link_custom">
-                <CustomLink to={"/ProfilePage"} >Profile</CustomLink>
+                <CustomLink to={"/profile"} >Profile</CustomLink>
                 </div>
                 <div class="div_link_custom">
-                <CustomLink to={"/MessagePage"} >Message</CustomLink>
+                <CustomLink to={"/message"} >Message</CustomLink>
                 </div>
                 <div class="div_link_custom">
-                <CustomLink to={"/ChatPage"} >Chat</CustomLink>
+                <CustomLink to={"/chat"} >Chat</CustomLink>
                 </div>
                 </div>
             </header>
             <main class="div_main">
                 <Outlet />
             </main>
-            <footer class="div_footer">
+            <footer>
                 footer
             </footer>
         </>
