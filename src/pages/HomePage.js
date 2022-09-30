@@ -1,12 +1,14 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+
 
 const HomePage = () => {
-    return (
-        <Link>
-            Добро пожаловать
-        </Link>
 
+    return (
+        <>
+        <header>
+            <p>Добро пожаловать</p>
+        </header>
+    </>
     );
 };
 
