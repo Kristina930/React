@@ -1,18 +1,24 @@
-import React, {useState} from 'react';
-import {useOutletContext, useParams} from "react-router-dom";
+import React, { useState } from 'react';
+import { useParams} from "react-router-dom";
 import MessagePage from "./MessagePage";
-import {Box, Button, TextField} from "@mui/material";
+import { Box, Button, TextField } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
+import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import { getChat } from "../store/chats/selectors";
+import { getMessages } from '../../store/messages/selectors';
 
 
 
 function CurrentChatPage() {
     const [message, setMessage] = useState('');
     const {chatId} = useParams();
-    const [chat] = useOutletContext();
+    const dispatch = useDispatch();
+    const chats = useSelector(getChat(chatId), shallowEqual);
+    const messages = useSelector(getMessages(chatId), shallowEqual);
+
     const messageUpdate = (e) => {
         e.preventDefault();
-        chat[chatId].message.push({text: message, author: 'text', id: chat[chatId].message.length + 1 })
+        dispatch({type: 'addMessages', message: message,  chatId: chatId })
         setMessage('');
     }
     
@@ -20,6 +26,9 @@ function CurrentChatPage() {
     return (
         <div class="chat_box">
                 <Box component="form" onSubmit={messageUpdate}>
+                    <div>
+                    <MessagePage messages={(messages)}/>
+                    </div>
                         <TextField
                             id="outlined-multiline"
                             label="Message"
@@ -30,7 +39,7 @@ function CurrentChatPage() {
                         <Button variant="contained"  type={"submit"}
                             endIcon={<SendIcon/>}>send</Button>
                         </Box>
-            <MessagePage message={chat[chatId].message}/>
+            <MessagePage messages={chats[chatId].messages}/>
         </div>
     );
 }

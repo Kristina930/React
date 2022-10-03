@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -7,50 +6,25 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import { Link } from 'react-router-dom';
 import { Button, Input } from '@mui/material';
-
-
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 
 const ChatPage = () => {
-    const [chats, setChats] = useState([
-        {
-            id: 1,
-            name: "Maria",
-        },
-        {
-            id: 2,
-            name: "Alexei",
-        },
-        {
-            id: 3,
-            name: "Kristina",
-        }
-    ])
-
+    const chats = useSelector(state => state.chats.chats);
+    const dispatch = useDispatch();
     const [name, setName] = useState("");
-
-
-    const handleDelete = (id) => {
-        const filterd = chats.filter((chat) => chat.id !== id);
-        setChats(filterd)
-    }
-
-    const handleAdd = () => {
-        const obj = {
-            id: Date.now(),
-            name: name
-        }
-        setChats(prevState => [...prevState, obj])
-    }
-
     
+    const handleDelete = (id) => {
+        dispatch({type: 'deleteChat', id: id})
+    }
 
     return (
         
         <ListItem disablePadding sx={{ display: 'block', mb: 3,  width: 500}}>
             <div>
                 <Input value={name} onChange={(e) => setName(e.target.value)} sx={{ marginLeft: 2, mt: 5}}/>
-                    <Button onClick={handleAdd}>Добавить чат</Button>
+                    <Button onClick={()=>dispatch({type: 'addChat'})}>Добавить чат</Button>
                 {chats.map((chat) => {
                     return(
                         <ListItemButton key={chat.id} sx={{ height: 150, bgcolor: "beige"}} onClick={() => handleDelete(chat.id)}>
@@ -61,7 +35,7 @@ const ChatPage = () => {
                                 </Link>  
                             </ListItemAvatar>
                         <ListItemText />
-                        X
+                        Х
                     </ListItemButton>
                     )
                 })}

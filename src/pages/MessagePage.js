@@ -1,41 +1,17 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import { useParams } from 'react-router-dom';
-import { Card, CardContent, Typography } from '@mui/material';
+import { Card, CardContent, Input, Typography } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
+import { useSelector } from 'react-redux';
+import {useDispatch} from "react-redux";
 
-const MessagePage = ()  => {
-    const [message] = useState([
-        {
-            id: 1,
-            text: "Привет",
-            chatId: 2
-
-        },
-        {
-            id: 2,
-            text: "Привет! Как дела?",
-            chatId: 3
-        },
-        {
-            id: 3,
-            text: "Все привет в этом чате!",
-            chatId: 1
-        },
-        {
-            id: 4,
-            text: "Дела отилчно, а у тебя?",
-            chatId: 2
-        },
-        {
-            id: 5,
-            text: "Ребят, как настроить хуки?",
-            chatId: 1
-        }
-    ])
+const MessagePage = ( ) => {
+    const dispatch = useDispatch();
+    const [text, setText] = useState("");
     const { id } = useParams();
-    //Написать функцию по выводу сообщений
+    const messages = useSelector(state => state.messages.messages);
 
-    const messages = message.filter ((message) => {
+    const message = messages.filter ((message) => {
         if(!id) return true
 
         return message.chatId === Number(id)
@@ -56,6 +32,16 @@ const MessagePage = ()  => {
                     </Card>
                     )
                 })}
+
+            <Input value={text} onChange={(e) => setText(e.target.value)}/>
+            
+            <button onClick={() => (dispatch({type: 'addMessages', id: message.id}))}>
+                Добавить сообщение
+            </button>
+
+            <button onClick={() => (dispatch({type: 'deleteMessages', id: message.id}))}>
+                Удалить сообщение
+            </button>
         </div>
     );
 };
