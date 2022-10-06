@@ -2,7 +2,7 @@ import "./App.css";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import ChatPage from "./pages/ChatPage";
+import ChatContainerPage from "./pages/ChatContainerPage";
 import MessagePage from "./pages/MessagePage"
 import ProfilePage from "./pages/ProfilePage";
 import NotFoundPage from "./pages/NotFoundPage";
@@ -23,7 +23,7 @@ function App() {
         <Route path={'/'} element={<Layout />}>
           <Route index element={<HomePage />} />
           <Route path={'/profile'} element={<ProfilePage />} />
-          <Route path={'/chat'} element={<ChatPage />} />
+          <Route path={'/chat'} element={<ChatContainerPage />} />
           <Route path={'/message/:id'} element={<MessagePage />}/>
           <Route path={'*'} element={<NotFoundPage />} />
         </Route>

@@ -40,7 +40,7 @@ const ChatPage = () => {
                     )
                 })}
             </div>
-        </ListItem>
+            </ListItem>
 
     );
 };

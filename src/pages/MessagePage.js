@@ -5,7 +5,7 @@ import Avatar from '@mui/material/Avatar';
 import { useSelector } from 'react-redux';
 import {useDispatch} from "react-redux";
 
-const MessagePage = ( ) => {
+const MessagePage = () => {
     const dispatch = useDispatch();
     const [text, setText] = useState("");
     const { id } = useParams();
@@ -35,10 +35,6 @@ const MessagePage = ( ) => {
 
             <Input value={text} onChange={(e) => setText(e.target.value)}/>
             
-            <button onClick={() => (dispatch({type: 'addMessages', id: message.id}))}>
-                Добавить сообщение
-            </button>
-
             <button onClick={() => (dispatch({type: 'deleteMessages', id: message.id}))}>
                 Удалить сообщение
             </button>

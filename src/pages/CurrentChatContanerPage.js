@@ -15,6 +15,7 @@ function CurrentChatPage() {
     const dispatch = useDispatch();
     const chats = useSelector(getChat(chatId), shallowEqual);
     const messages = useSelector(getMessages(chatId), shallowEqual);
+ 
 
     const messageUpdate = (e) => {
         e.preventDefault();

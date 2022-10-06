@@ -32,18 +32,23 @@ const initialState = {
 
 export const messagesReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'addMessages':
-            return {
-                ...state,
-                messages: [...state.messages, action.payload]
-            }
+
         case 'deleteMessages':
             return {
                 ...state,
                 messages: state.messages.filter((message) => message.id !== action.payload)
             };
 
+        case 'addMessages':
+            return {
+                ...state,
+                messages: [...state.messages, action.payload]
+            };
+
         default:
             return state
     }
 }
+
+export const deleteMessages = (payload) => ({type: 'deleteMessages', payload});
+export const addMessages = (payload) =>({type: 'addMessages', payload})
