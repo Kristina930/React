@@ -1,12 +1,15 @@
 import React from 'react';
-import { Stack } from "@mui/material";
 
-function HomePage(props) {
+
+const HomePage = () => {
+
     return (
-        <Stack spacing={2}>
-            Добро пожаловать
-        </Stack>
+        <>
+        <header>
+            <p>Добро пожаловать</p>
+        </header>
+    </>
     );
-}
+};
 
 export default HomePage;

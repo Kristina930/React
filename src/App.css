@@ -55,5 +55,13 @@
 }
 .chat_box{
   margin-top: 20px;
+}
+.chat_bt{
+  margin-left: 25em;
+  margin-top: 5px;
+  background: darkorange;
+  border: darkorange;
+  width: 30px;
+  height: 30px;
 
 }

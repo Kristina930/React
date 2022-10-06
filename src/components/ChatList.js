@@ -7,7 +7,7 @@ import {ThemeProvider, createTheme} from "@mui/material/styles";
 import { orange } from "@mui/material/colors";
 import { Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
-import ChatPage from "../pages/ChatPage";
+import ChatContainerPage from "../pages/ChatContainerPage";
 import MessagePage from "../pages/MessagePage";
 
 
@@ -64,7 +64,7 @@ return (
         <div className="massage-text">
             <Typography variant="h3" component="div" color="primary.main">chat List</Typography>
             <List sx={{ margin: '10px 0 10 px 0', width: "100%", bgcolor: "background.paper" }}>
-            {chatList.map((item) => <ChatPage name={item.name} key={item.id}/>)}
+            {chatList.map((item) => <ChatContainerPage name={item.name} key={item.id}/>)}
             </List>
         </div>  
         <div className="messages">
