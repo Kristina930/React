@@ -30,6 +30,9 @@ const Layout = () => {
                     <div class="div_link_custom">
                     <CustomLink to={"/chat"} >Chat</CustomLink>
                     </div>
+                    <div class="div_link_custom">
+                    <CustomLink to={"/user"} >User</CustomLink>
+                    </div>
                     </div>
                     </div>
             </header>

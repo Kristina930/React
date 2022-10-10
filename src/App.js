@@ -8,6 +8,7 @@ import ProfilePage from "./pages/ProfilePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Layout from "./components/Layout";
 import Header from "./components/Header";
+import UsersPage from "./pages/UsersPage";
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path={'/profile'} element={<ProfilePage />} />
           <Route path={'/chat'} element={<ChatContainerPage />} />
+          <Route path={'/user'} element={<UsersPage />} />
           <Route path={'/message/:id'} element={<MessagePage />}/>
           <Route path={'*'} element={<NotFoundPage />} />
         </Route>
