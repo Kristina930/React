@@ -8,7 +8,8 @@ import ProfilePage from "./pages/ProfilePage";
 import NotFoundPage from "./pages/NotFoundPage";
 import Layout from "./components/Layout";
 import Header from "./components/Header";
-import UsersPage from "./pages/UsersPage";
+import RegisterPage from './pages/RegisterPage';
+import LoginPage from "./pages/LoginPage";
 
 
 
@@ -25,8 +26,9 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path={'/profile'} element={<ProfilePage />} />
           <Route path={'/chat'} element={<ChatContainerPage />} />
-          <Route path={'/user'} element={<UsersPage />} />
           <Route path={'/message/:id'} element={<MessagePage />}/>
+          <Route path={'/register'} element={<RegisterPage />} />
+          <Route path={'/login'} element={<LoginPage/>} />
           <Route path={'*'} element={<NotFoundPage />} />
         </Route>
       </Routes>
@@ -35,5 +37,6 @@ function App() {
 
   );
 }
+
 
 export default App;
