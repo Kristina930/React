@@ -17,7 +17,7 @@ const  LoginPage = () => {
             return;
         }
         dispatch(loginInitiate(email, password))
-        navigate('/home')
+        navigate('/addContact')
     }
 
     return (

@@ -1,5 +1,8 @@
 .App {
-  text-align: center;
+  font-family: sans-serif;
+  margin: 0 auto;
+  font-size: 1.2rem;
+
 }
 
 .App-logo {
@@ -22,6 +25,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .App-link {
@@ -36,18 +40,14 @@
     transform: rotate(360deg);
   }
 }
-.div_link{
+.div_app{
   display: flex;
   margin-top: 20px;
 }
 .div_link_custom{
-  margin-left: 20px;
+  padding: 20px 20px 0;
 }
-.div_main{
-  margin-top: 20px;
-  margin-left: 20px;
 
-}
 .div_footer{
   margin-top: 20px;
   margin-left: 20px;
@@ -63,5 +63,37 @@
   border: darkorange;
   width: 30px;
   height: 30px;
+
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+.header-logo{
+  text-align: center;
+  padding-top: 5px;
+}
+.logo{
+  text-decoration: none;
+  color: orangered;
+}
+.header-right{
+  display: flex;
+  margin-left: 20px;
+
+}
+.header_link{
+  text-decoration: none;
+  color: orangered;
+}
+
+
+.header-button{
+  width: 150px;
+  height: 30px;
+  border: #FFA07A;
+  background: #808080;
+  color: #F4A460;
 
 }

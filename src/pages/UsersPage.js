@@ -1,5 +1,5 @@
 
-/*import { useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUsers } from "../redux/reducers/usersReducer";
 
@@ -13,7 +13,7 @@ function UsersPage() {
 
     useEffect(() => {
         dispatch(getUsers());
-    }, []); //не выводит данные, ругаеться на пустой обьект
+    }); //не выводит данные, ругаеться на пустой обьект
 
 
     const fetchUsers = () => {
@@ -54,4 +54,4 @@ function UsersPage() {
     )
 }
 
-export default UsersPage;*/
+export default UsersPage;
