@@ -1,11 +1,15 @@
 import React, { useContext } from "react";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { ThemeContext } from "../context";
 import CustomLink from "./CustomLink";
 import {  logoutInitiate } from '../redux/reducers/usersReducer';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import layers from '../layers.png';
+
+
+
+
 
 
 const Header = () => {
@@ -29,12 +33,10 @@ const Header = () => {
 
     return (
         <>
-        <header style={{background: themes.background, color: 'black', padding: "30px"}}>
-            <div className="header">
-            <div className="header-logo">
-            <Link to={"/"} className={'logo'}>
-              <p className={'logo'}>logo</p>  
-            </Link>
+        <header style={{background: themes.background, padding: "30px"}} >
+            <div className="header wrapper">
+            <div className="header-logo" >
+            <img src={layers} className="logo" alt="logo" />
             </div>
             <div className="header-right">
                 <div className="div_link_custom">
@@ -44,13 +46,13 @@ const Header = () => {
                 <CustomLink to={"/chat"} >Chat</CustomLink>
                 </div>
                 <div className="div_link_custom">
-                <CustomLink to={'/about'}>About</CustomLink>
+                <CustomLink to={'/about'} >About</CustomLink>
                 </div>
                 <div className="div_link_custom">
-                <CustomLink to={'/addContact'}>Add Contact</CustomLink>
+                <CustomLink to={'/addContact'} >Add Contact</CustomLink>
                 </div>
                 <div className="div_link_custom">
-                <CustomLink to={"/register"}>Register</CustomLink>
+                <CustomLink to={"/register"} >Register</CustomLink>
                 </div>
                 <div className="div_link_custom">
                 <CustomLink to={"/login"} >Login</CustomLink>
@@ -68,8 +70,10 @@ const Header = () => {
                     
                 )}
             </div>
+            <div class="header_button_theme">
+            <button onClick={toggleTheme} class="header-button ">Изменить тему</button>
             </div>
-            <button onClick={toggleTheme} class="header-button">Изменить тему</button>
+            </div>
         </header>
         </>
     );

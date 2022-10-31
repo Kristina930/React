@@ -1,10 +1,10 @@
-import "./App.css";
+/*import "./App.css";
 import React, { useState, useEffect, useRef } from "react";
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import List from "@mui/material/List";
 import {ThemeProvider, createTheme} from "@mui/material/styles";
-import { orange } from "@mui/material/colors";
+//import { orange } from "@mui/material/colors";
 import { Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import ChatContainerPage from "../pages/ChatContainerPage";
@@ -15,7 +15,7 @@ function App() {
     const theme = createTheme({
     palette: {
         primary: {
-            main: orange[400],
+            main: '#CEC3E9',
         },
     },
 });
@@ -110,5 +110,5 @@ return (
 }
 
 
-export default App;
+export default App;*/
 

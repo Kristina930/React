@@ -1,4 +1,5 @@
-import "./App.css";
+import "./css/App.css";
+import "./css/global.css";
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
@@ -8,8 +9,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import Layout from "./components/Layout";
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from "./pages/LoginPage";
-import AboutPage from "./pages/AboutPage";
-//import ProtectedRoutes from "./components/ProtectedRoutes";
+import AboutPage from "./pages/AboutPage"; 
 import AddContactPage from "./pages/AddContactPage";
 
 
@@ -19,7 +19,7 @@ import AddContactPage from "./pages/AddContactPage";
 function App() {
   
   return (
-    <div className="App" >
+    <div className="App">
       <Routes>
         <Route path={'/'} element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -28,7 +28,6 @@ function App() {
           <Route path={'/register'} element={<RegisterPage />} />
           <Route path={'/login'} element={<LoginPage/>} />
           <Route path={'/about'} element={<AboutPage/>} />
-         
           <Route path={'/addContact'} element={<AddContactPage/>} />
           <Route path={'*'} element={<NotFoundPage />} />
         </Route>

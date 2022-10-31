@@ -4,6 +4,7 @@ import { useState } from "react";
 import { themes } from "../context";
 import { ThemeContext } from "../context";
 import Header from "./Header";
+import Footer from "./Footer";
 
 
 const Layout = () => {
@@ -16,16 +17,16 @@ const Layout = () => {
     }
     return (
         <>
-            <div style={{background: themes.background, color: themes.text, maxWidth: "100%", height: 500}}>
+            <div style={{background: themes.background, color: themes.text, maxWidth: "100%", height: 500}} >
             <ThemeContext.Provider value={{themes: theme, toggleTheme: toggleTheme}}>
 
             <Header/>
 
-            <main >
+            <main class="wrapper">
                 <Outlet className='outlet'/>
             </main>
-            <footer className="div_footer">
-                footer
+            <footer className="footer">
+                <Footer />
             </footer>
             </ThemeContext.Provider>
             </div>

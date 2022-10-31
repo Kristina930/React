@@ -21,14 +21,14 @@ const  LoginPage = () => {
     }
 
     return (
-        <div>
+        <div class="login_box">
             <h2>
                 Логин
             </h2>
             <form onSubmit={handleSubmit}>
-                <input value={email} onChange={(e) => setEmail(e.target.value)}/>
-                <input value={password} onChange={(e) => setPassword(e.target.value)}/>
-                <button type={'submit'}>Зарегистрироваться</button>
+                <input value={email} onChange={(e) => setEmail(e.target.value)} class="login_box_input"/>
+                <input value={password} onChange={(e) => setPassword(e.target.value)} class="login_box_input"/>
+                <button type={'submit'} class="login_box_button">Зарегистрироваться</button>
             </form>
 
         </div>

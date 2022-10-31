@@ -34,15 +34,15 @@ const AddContactPage = () => {
     }
 
     return (
-        <div>
+        <div class="add_box">
             <form onClick={handleSubmit}>
-                <label htmlFor={"name"}>Name</label>
-                <input id={'name'} name={"name"} onChange={handleChange} value={name} />
-                <label htmlFor={"email"}>Email</label>
-                <input id={'email'} name={"email"} onChange={handleChange} value={email}/>
-                <label htmlFor={"contact"}>Contact</label>
-                <input id={'contact'} name={"contact"} onChange={handleChange} value={contact}/>
-                <input type={'submit'} value={'save'}/>
+                <label htmlFor={"name"} class="add_box_label">Name</label>
+                <input id={'name'} name={"name"} onChange={handleChange} value={name} class="add_box_input"/>
+                <label htmlFor={"email"} class="add_box_label">Email</label>
+                <input id={'email'} name={"email"} onChange={handleChange} value={email} class="add_box_input"/>
+                <label htmlFor={"contact"} class="add_box_label">Contact</label>
+                <input id={'contact'} name={"contact"} onChange={handleChange} value={contact} class="add_box_input"/>
+                <input type={'submit'} value={'Ввести данные'} class="add_box_button"/>
             </form>
         </div>
 
