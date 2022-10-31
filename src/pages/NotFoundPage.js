@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 const NotFoundPage = () => {
     return (
         <div>
-            Not Found Page. Please go to <Link tp={'/'}>Chat</Link>
+           Вы успешно прошли регистрацию.
+           Теперь Вы можете пройти на страницу <Link to={'/chat'}>Chat</Link>
         </div>
 
     );

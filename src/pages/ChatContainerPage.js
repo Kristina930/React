@@ -22,20 +22,32 @@ const ChatPage = () => {
     return (
         
         <ListItem disablePadding sx={{ display: 'block', mb: 3,  width: 500}}>
-            <div class="chat_btm_list">
-                <Input value={name} onChange={(e) => setName(e.target.value)} sx={{ marginLeft: 2, mt: 5, width: 260, }} />
-                    <Button onClick={()=>dispatch({type: 'addChat'})} class="chat_btm">Добавить чат</Button>
+            <div className="chat_btm_list">
+                <Input value={name} onChange={(e) => setName(e.target.value)} sx={{ marginLeft: 2, mt: 5, width: 270, }} />
+                    <Button onClick={()=>dispatch({type: 'addChat'})} 
+                    sx={{marginLeft: 2, 
+                    width: 150, 
+                    height: 30, 
+                    borderColor: '#8C82FC', 
+                    background: "#CEC3E9", 
+                    fontFamily: "Roboto", 
+                    fontSize: 15}}
+                    >
+                    Добавить чат
+                    </Button>
                 {chats.map((chat) => {
                     return(
-                        <ListItemButton key={chat.id}  onClick={() => handleDelete(chat.id)} class="list_item">
-                            <ListItemAvatar  sx={{ marginLeft: 3, mt: 3, }}>
-                                <Link to={`/message/${chat.id}`} key={chat.id} class="link_item_chat">
+                        <ListItemButton key={chat.id}  onClick={() => handleDelete(chat.id)} 
+                        sx={{background: "#CEC3E9", marginTop: 5, height: 150, marginLeft: 2 }}>
+                            <ListItemAvatar  sx={{ marginLeft: 3,  }}>
+                                <Link to={`/message/${chat.id}`} key={chat.id} className="link_item_chat">
                                     {chat.name}
                                     <Avatar sx={{ height: 50, width: 50, marginTop: 1}}/>
                                 </Link>  
                             </ListItemAvatar>
                         <ListItemText />
-                        <div class="item_button">Х</div>
+                        
+                        Х
                     </ListItemButton>
                     )
                 })}

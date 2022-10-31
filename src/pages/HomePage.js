@@ -27,7 +27,7 @@ const HomePage = () => {
 
     return (
         <div style={{textAlign:'center'}}>
-        <div class="home_p">
+        <div className="home_p">
             <p>Добро пожаловать в приложение на React!</p>
         </div>
         <div>

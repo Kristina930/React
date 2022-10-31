@@ -33,45 +33,42 @@ const Header = () => {
 
     return (
         <>
-        <header style={{background: themes.background, padding: "30px"}} >
+        <header style={{background: themes.background, padding: 30, height: 180}} >
             <div className="header wrapper">
-            <div className="header-logo" >
+            <div className="header_logo" >
             <img src={layers} className="logo" alt="logo" />
             </div>
             <div className="header-right">
                 <div className="div_link_custom">
-                <CustomLink  to={'/'} >Home</CustomLink>
+                <CustomLink  to={'/'} >Главная</CustomLink>
                 </div>
                 <div className="div_link_custom">
-                <CustomLink to={"/chat"} >Chat</CustomLink>
+                <CustomLink to={"/chat"} >Чаты</CustomLink>
                 </div>
                 <div className="div_link_custom">
-                <CustomLink to={'/about'} >About</CustomLink>
+                <CustomLink to={'/about'} >О компании</CustomLink>
                 </div>
                 <div className="div_link_custom">
-                <CustomLink to={'/addContact'} >Add Contact</CustomLink>
+                <CustomLink to={'/addContact'} >Добавить контакты</CustomLink>
                 </div>
-                <div className="div_link_custom">
-                <CustomLink to={"/register"} >Register</CustomLink>
-                </div>
-                <div className="div_link_custom">
-                <CustomLink to={"/login"} >Login</CustomLink>
-                </div>
+                
                 {user ? (
                     <p style={{cursor: 'pointer'}} onClick={handleAuth}>
-                        Sign oUT
+                        
                     </p>
                 ) : (
                     <div className="div_link_custom">
                         <CustomLink to={'/login'} >
-                            Sign in
+                            Войти
                         </CustomLink>
                     </div>
-                    
                 )}
+                <div className="div_link_custom">
+                <CustomLink to={"/register"} >Регистрация</CustomLink>
+                </div>
             </div>
-            <div class="header_button_theme">
-            <button onClick={toggleTheme} class="header-button ">Изменить тему</button>
+            <div className="header_button_theme">
+            <button onClick={toggleTheme} className="header_button ">Изменить тему</button>
             </div>
             </div>
         </header>

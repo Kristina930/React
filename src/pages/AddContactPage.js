@@ -34,15 +34,18 @@ const AddContactPage = () => {
     }
 
     return (
-        <div class="add_box">
+        <div className="add_box">
+            <h2>
+                Добавить контакт
+           </h2>
             <form onClick={handleSubmit}>
-                <label htmlFor={"name"} class="add_box_label">Name</label>
-                <input id={'name'} name={"name"} onChange={handleChange} value={name} class="add_box_input"/>
-                <label htmlFor={"email"} class="add_box_label">Email</label>
-                <input id={'email'} name={"email"} onChange={handleChange} value={email} class="add_box_input"/>
-                <label htmlFor={"contact"} class="add_box_label">Contact</label>
-                <input id={'contact'} name={"contact"} onChange={handleChange} value={contact} class="add_box_input"/>
-                <input type={'submit'} value={'Ввести данные'} class="add_box_button"/>
+                <label htmlFor={"name"}  className="add_box_label">Имя контакта</label> 
+                    <input id={'name'} name={"name"} placeholder="Имя" onChange={handleChange} value={name} className="add_box_input"/>
+                <label htmlFor={"email"} className="add_box_label">Email контакта</label>
+                    <input id={'email'} name={"email"}  placeholder="email" onChange={handleChange} value={email} className="add_box_input"/>
+                <label htmlFor={"contact"} className="add_box_label">Телефон</label>
+                    <input id={'contact'} name={"contact"} placeholder="Телефон" onChange={handleChange} value={contact} className="add_box_input"/>
+                <input type={'submit'} value={'Ввести данные'} className="add_box_button"/>
             </form>
         </div>
 

@@ -8,7 +8,7 @@ const CustomLink = ({ to, children }) => {
     const match = useMatch(to);
 
     return (
-        <Link to={to}  className={match ? 'active' : ''} class='header_link'  
+        <Link to={to}  className={match ? 'active' : ''} 
         style={{textDecoration: 'none',}}>
             <p className={match ? 'active' : ''}  >{children}</p>  
         </Link>

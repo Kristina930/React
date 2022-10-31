@@ -25,7 +25,7 @@ function CurrentChatPage() {
     
 
     return (
-        <div class="chat_box">
+        <div className="chat_box">
                 <Box component="form" onSubmit={messageUpdate}>
                     <div>
                     <MessagePage messages={(messages)}/>

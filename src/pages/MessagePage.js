@@ -22,9 +22,9 @@ const MessagePage = () => {
         <div>
                 {messages.map((message) => {
                     return(
-                        <Card  class="link_item_message">
-                        <CardContent to={`/chat/${message.chatId}`} key={message.chatId}  class="messages_card">
-                                <Avatar sx={{ mb: 2, height: 50, width: 50, marginTop: 4, marginLeft: 3}}/>
+                        <Card  sx={{marginTop: 5}} >
+                        <CardContent to={`/chat/${message.chatId}`} key={message.chatId}  sx={{background: "#CEC3E9"}}>
+                                <Avatar sx={{ mb: 2, height: 50, width: 50,  marginLeft: 3}}/>
                                 <Typography variant="h5" component="div" color="primary.main" sx={{marginLeft: 12, marginTop: -7}}>
                                 {message.text}
                             </Typography>
@@ -35,7 +35,7 @@ const MessagePage = () => {
 
             <Input value={text} onChange={(e) => setText(e.target.value)} sx={{ marginLeft: 5, mt: 5, width: 260, }}/>
             
-            <button onClick={() => (dispatch({type: 'deleteMessages', id: message.id}))} class="messages_btn">
+            <button onClick={() => (dispatch({type: 'deleteMessages', id: message.id}))} className="messages_btn">
                 Удалить сообщение
             </button>
         </div>
