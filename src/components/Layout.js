@@ -1,9 +1,10 @@
 import React from "react";
-import CustomLink from "./CustomLink";
 import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import { themes } from "../context";
 import { ThemeContext } from "../context";
+import Header from "./Header";
+import Footer from "./Footer";
 
 
 const Layout = () => {
@@ -16,28 +17,16 @@ const Layout = () => {
     }
     return (
         <>
-            <div style={{background: themes.background, color: themes.text, maxWidth: "100%", height: 500}}>
+            <div style={{background: themes.background, color: themes.text, maxWidth: "100%", height: 500}} >
             <ThemeContext.Provider value={{themes: theme, toggleTheme: toggleTheme}}>
-            <header>
-                    <div>
-                    <div class="div_link">
-                    <div class="div_link_custom">
-                    <CustomLink to={"/"} >Hom</CustomLink>
-                    </div>
-                    <div class="div_link_custom">
-                    <CustomLink to={"/profile"} >Profile</CustomLink>
-                    </div>
-                    <div class="div_link_custom">
-                    <CustomLink to={"/chat"} >Chat</CustomLink>
-                    </div>
-                    </div>
-                    </div>
-            </header>
-            <main class="div_main">
-                <Outlet />
+
+            <Header/>
+
+            <main class="wrapper">
+                <Outlet className='outlet'/>
             </main>
-            <footer>
-                footer
+            <footer className="footer">
+                <Footer />
             </footer>
             </ThemeContext.Provider>
             </div>

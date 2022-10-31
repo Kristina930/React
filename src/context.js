@@ -5,12 +5,12 @@ import { createContext } from "react"
 
 export const themes = {
     light: {
-        background: '#eee',
-        text: '#000'
+        background: '#CEC3E9',
+        text: '#000',
     },
     dark: {
         background: '#000',
-        text: '#eee'
+        text: '#FCD9E6',
     }
 }
 

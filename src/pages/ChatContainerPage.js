@@ -22,20 +22,20 @@ const ChatPage = () => {
     return (
         
         <ListItem disablePadding sx={{ display: 'block', mb: 3,  width: 500}}>
-            <div>
-                <Input value={name} onChange={(e) => setName(e.target.value)} sx={{ marginLeft: 2, mt: 5}}/>
-                    <Button onClick={()=>dispatch({type: 'addChat'})}>Добавить чат</Button>
+            <div class="chat_btm_list">
+                <Input value={name} onChange={(e) => setName(e.target.value)} sx={{ marginLeft: 2, mt: 5, width: 260, }} />
+                    <Button onClick={()=>dispatch({type: 'addChat'})} class="chat_btm">Добавить чат</Button>
                 {chats.map((chat) => {
                     return(
-                        <ListItemButton key={chat.id} sx={{ height: 150, bgcolor: "beige"}} onClick={() => handleDelete(chat.id)}>
-                            <ListItemAvatar  sx={{ marginLeft: 2, mt: 5}}>
-                                <Link to={`/message/${chat.id}`} key={chat.id}>
+                        <ListItemButton key={chat.id}  onClick={() => handleDelete(chat.id)} class="list_item">
+                            <ListItemAvatar  sx={{ marginLeft: 3, mt: 3, }}>
+                                <Link to={`/message/${chat.id}`} key={chat.id} class="link_item_chat">
                                     {chat.name}
-                                    <Avatar sx={{ mb: 5, height: 50, width: 50, mt: 2}}/>
+                                    <Avatar sx={{ height: 50, width: 50, marginTop: 1}}/>
                                 </Link>  
                             </ListItemAvatar>
                         <ListItemText />
-                        Х
+                        <div class="item_button">Х</div>
                     </ListItemButton>
                     )
                 })}
