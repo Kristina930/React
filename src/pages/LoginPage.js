@@ -21,14 +21,24 @@ const  LoginPage = () => {
     }
 
     return (
-        <div class="login_box">
+        <div className="login_box">
             <h2>
-                Логин
+                Вход в приложение
             </h2>
             <form onSubmit={handleSubmit}>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} class="login_box_input"/>
-                <input value={password} onChange={(e) => setPassword(e.target.value)} class="login_box_input"/>
-                <button type={'submit'} class="login_box_button">Зарегистрироваться</button>
+            <div className="register_box_form">
+                    <label className='register_box_label' for="name">
+                        Email:  <br />
+                        <input value={email} placeholder="Email" onChange={(e) => setEmail(e.target.value)} className="register_box_input"/>
+                    </label>
+                </div>
+                <div className="register_box_form">
+                    <label className='register_box_label' for="psw">                         
+                        Пароль: <br />
+                        <input value={password} placeholder="Пароль" onChange={(e) => setPassword(e.target.value)} className="register_box_input"/>
+                    </label>
+                </div>  
+                <button type={'submit'} className="login_box_button">Войти</button>
             </form>
 
         </div>

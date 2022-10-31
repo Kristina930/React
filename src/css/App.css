@@ -47,7 +47,7 @@
   display: flex;
   justify-content: space-between;
 }
-.header-logo{
+.header_logo{
   margin-top: 1em;
 }
 .logo{
@@ -69,13 +69,13 @@
   margin-top: 5rem;
 
 }
-.header-button{
+.header_button{
   width: 150px;
   height: 30px;
   border: 2px solid #8C82FC ;
   background: #CEC3E9;
   color: #878ECD;
-  margin-top: 10%;
+  margin-top: 18%;
 }
 
 .div_app{
@@ -98,7 +98,7 @@ td {
   text-align: left; 
 }
 .div_link_custom{
-  padding: 20px 20px 0;
+  padding: 10px 10px 0;
 }
 td, th {
   border: 1px solid #8C82FC ; 
@@ -110,22 +110,6 @@ td, th {
 .chat_box{
   margin-top: 20px;
 }
-.chat_btm{
-  margin-left: 2em;
-  width: 150px;
-  height: 30px;
-  border: 2px solid #8C82FC ;
-  background: #CEC3E9;
-  font-family: "Roboto";
-  font-size: 1rem;
-}
-.list_item{
-  border: 2px solid #8C82FC ;
-  background: #CEC3E9;
-  margin-top: 15px;
-  height: 150px;
-  margin-left: 10px;
-}
 .link_item_chat{
   text-decoration: none;
 }
@@ -133,10 +117,6 @@ td, th {
   margin-left: 420px;
   font-family: "Roboto";
   font-size: 1.5rem;
-}
-.link_item_message{
-  padding-top: 10px;
-  padding-left: 20px;
 }
 .messages_btn{
   margin-left: 2em;
@@ -146,6 +126,7 @@ td, th {
   background: #CEC3E9;
   font-family: "Roboto";
   font-size: 1rem;
+  border-radius: 5px;
 }
 .messages_card{
   border: 2px solid #8C82FC ;
@@ -163,8 +144,9 @@ td, th {
 }
 
 .abaut_p{
-  padding: 100px 100px 0;
-  width: 700px;
+  padding: 50px 50px 50px;
+  width: 500px;
+  text-align: justify;
 }
 
 .abaut_img{
@@ -172,11 +154,9 @@ td, th {
 }
 
 .add_box{
-  padding: 30px 30px 30px;
   font-family: "Roboto";
   font-size: 20px;
-  text-align: center;
-  padding-top: 20%;
+  padding-top: 10%;
 }
 .add_box_label{
   padding-right: 10px;
@@ -188,7 +168,7 @@ td, th {
   border: 2px solid #8C82FC ;
   border-radius: 5px;
   width: 200px;
-  height: 20px;
+  height: 25px;
 }
 .add_box_button{
   width: 150px;
@@ -206,24 +186,26 @@ td, th {
   font-size: 20px;
   padding-top: 10rem;
 }
+.register_box_form{
+ margin-top: 15px;
+} 
 .register_box_input{
   border: 2px solid #8C82FC ;
   border-radius: 5px;
-  width: 250px;
-  height: 23px;
+  width: 300px;
+  height: 35px;
   margin-right: 10px;
   padding: 5px 5px;
 }
 .register_box_button{
   width: 200px;
   height: 35px;
-  margin-left: 52rem;
   font-family: "Roboto";
   font-size: 16px;
   border: 2px solid #8C82FC ;
   background: #CEC3E9;
   border-radius: 5px;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
 }
 
 .login_box{
@@ -244,14 +226,13 @@ td, th {
 }
 .login_box_button{
   width: 200px;
-  height: 33px;
-  margin-left: 10px;
+  height: 35px;
   font-family: "Roboto";
   font-size: 16px;
   border: 2px solid #8C82FC ;
   background: #CEC3E9;
   border-radius: 5px;
-  margin-top: 5px;
+  margin-top: 2.5rem;
 }
 
 .footer_box{

@@ -22,7 +22,7 @@ const Layout = () => {
 
             <Header/>
 
-            <main class="wrapper">
+            <main className="wrapper">
                 <Outlet className='outlet'/>
             </main>
             <footer className="footer">

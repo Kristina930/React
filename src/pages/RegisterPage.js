@@ -23,18 +23,37 @@ const  RegisterPage = () => {
     
 
     return (
-        <div class="register_box">
+        <div className="register_box">
             <h2>
                 Регистрация
             </h2>
-            <form onSubmit={handleSubmit}>
-                <input value={displayName} onChange={(e) => setDisplayName(e.target.value)} class="register_box_input"/>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} class="register_box_input"/>
-                <input value={password} onChange={(e) => setPassword(e.target.value)} class="register_box_input"/>
-                <input value={passwordConfirm} onChange={(e) => setPasswordConfirm(e.target.value)} class="register_box_input"/>
-                <button type={'submit'} class="register_box_button">Зарегистрироваться</button>
+            <form onSubmit={handleSubmit}  >
+                <div className="register_box_form">
+                    <label className='register_box_label' for="name">
+                        Имя: <br />
+                        <input value={displayName} placeholder="Имя" onChange={(e) => setDisplayName(e.target.value)} className="register_box_input"/>
+                    </label>
+                </div>
+                <div className="register_box_form">
+                    <label>
+                        Email:  <br />   
+                        <input value={email} placeholder="Email" onChange={(e) => setEmail(e.target.value)} className="register_box_input"/>
+                    </label>
+                </div>
+                <div className="register_box_form">
+                    <label className='register_box_label' for="psw">                         
+                        Пароль: <br />
+                        <input value={password} placeholder="Пароль" onChange={(e) => setPassword(e.target.value)} className="register_box_input"/>
+                    </label>
+                </div>   
+                <div className="register_box_form">
+                    <label className='register_box_label' for="psw-repeat">
+                        Подтвердите пароль: <br />
+                        <input value={passwordConfirm} placeholder="Повторить пароль" onChange={(e) => setPasswordConfirm(e.target.value)} className="register_box_input"/>
+                    </label>  
+                </div>
+                <button type={'submit'} className="register_box_button">Зарегистрироваться</button>
             </form>
-
         </div>
     );
 };

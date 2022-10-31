@@ -6,44 +6,37 @@ import { FaGoogle } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 
 
-
-
-
-
-
 const Footer = () => {
 
-
-
     return (
-        <div class="footer_box">
-        <div class="wrapper">
-        <div class="footer_box_socials">
-                <span class="footer_box_text">FOLLOW US</span>
+        <div className="footer_box">
+        <div className="wrapper">
+        <div className="footer_box_socials">
+                <span className="footer_box_text">ПОДПИСЫВАЙТЕСЬ НА НАС</span>
             </div>
-            <div class="footer_box_icon">
-                <div class="footer_socials">
+            <div className="footer_box_icon">
+                <div className="footer_socials">
                     <Link>
                         <AiFillGithub />
                     </Link>
                 </div>
-                <div class="footer_socials">
+                <div className="footer_socials">
                     <Link>
                         <FiTwitter  />
                     </Link>
                 </div>
-                <div class="footer_socials">
+                <div className="footer_socials">
                     <Link>
                         <FaFacebookF />
                     </Link>  
                 </div>
-                <div class="footer_socials">
+                <div className="footer_socials">
                     <Link>
                         <FaGoogle />
                     </Link>
                 </div>     
             </div>
-            <div class="footer_box_copyrig">
+            <div className="footer_box_copyrig">
                 <p>Copyright Masum Parvej, All Rights Reserved</p>
             </div>
         </div>

@@ -1,19 +1,22 @@
 
-import { useEffect } from "react";
+import React,{ useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUsers } from "../redux/reducers/usersReducer";
 
 
-function UsersPage() {
+function UsersPage()  {
 
-    const users = useSelector(state => state.users);
-    const loading = useSelector(state => state.loading);
-    const error = useSelector(state => state.error);
+    const users = useSelector(state => state.users.users);
+    const loading = useSelector(state => state.users.loading);
+    const error = useSelector(state => state.users.error);
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(getUsers());
-    }); //не выводит данные, ругаеться на пустой обьект
+        return () => {
+            dispatch({type: users})
+        }
+    },[dispatch, users]);
 
 
     const fetchUsers = () => {
